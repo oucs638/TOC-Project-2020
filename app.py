@@ -14,21 +14,151 @@ load_dotenv()
 
 
 machine = TocMachine(
-    states=["user", "state1", "state2"],
+    states=["user", "base", "flavor", "rondom", "base0", "base1", "base2", "base3", "base4", "base5", "flavor00", "flavor01", "flavor02",
+            "flavor03", "flavor04", "flavor05", "flavor06", "flavor07", "flavor08", "flavor09", "flavor10", "flavor11", "flavor12"],
     transitions=[
         {
             "trigger": "advance",
             "source": "user",
-            "dest": "state1",
-            "conditions": "is_going_to_state1",
+            "dest": "base",
+            "conditions": "is_going_to_base",
         },
         {
             "trigger": "advance",
             "source": "user",
-            "dest": "state2",
-            "conditions": "is_going_to_state2",
+            "dest": "flavor",
+            "conditions": "is_going_to_flavor",
         },
-        {"trigger": "go_back", "source": ["state1", "state2"], "dest": "user"},
+        {
+            "trigger": "advance",
+            "source": "user",
+            "dest": "random",
+            "conditions": "is_going_to_random",
+        },
+        {
+            "trigger": "advance",
+            "source": "base",
+            "dest": "base0",
+            "conditions": "is_going_to_base0",
+        },
+        {
+            "trigger": "advance",
+            "source": "base",
+            "dest": "base1",
+            "conditions": "is_going_to_base1",
+        },
+        {
+            "trigger": "advance",
+            "source": "base",
+            "dest": "base2",
+            "conditions": "is_going_to_base2",
+        },
+        {
+            "trigger": "advance",
+            "source": "base",
+            "dest": "base3",
+            "conditions": "is_going_to_base3",
+        },
+        {
+            "trigger": "advance",
+            "source": "base",
+            "dest": "base4",
+            "conditions": "is_going_to_base4",
+        },
+        {
+            "trigger": "advance",
+            "source": "base",
+            "dest": "base5",
+            "conditions": "is_going_to_base5",
+        },
+        {
+            "trigger": "advance",
+            "source": "flavor",
+            "dest": "flavor00",
+            "conditions": "is_going_to_flavor00",
+        },
+        {
+            "trigger": "advance",
+            "source": "flavor",
+            "dest": "flavor01",
+            "conditions": "is_going_to_flavor01",
+        },
+        {
+            "trigger": "advance",
+            "source": "flavor",
+            "dest": "flavor02",
+            "conditions": "is_going_to_flavor02",
+        },
+        {
+            "trigger": "advance",
+            "source": "flavor",
+            "dest": "flavor03",
+            "conditions": "is_going_to_flavor03",
+        },
+        {
+            "trigger": "advance",
+            "source": "flavor",
+            "dest": "flavor04",
+            "conditions": "is_going_to_flavor04",
+        },
+        {
+            "trigger": "advance",
+            "source": "flavor",
+            "dest": "flavor05",
+            "conditions": "is_going_to_flavor05",
+        },
+        {
+            "trigger": "advance",
+            "source": "flavor",
+            "dest": "flavor06",
+            "conditions": "is_going_to_flavor06",
+        },
+        {
+            "trigger": "advance",
+            "source": "flavor",
+            "dest": "flavor07",
+            "conditions": "is_going_to_flavor07",
+        },
+        {
+            "trigger": "advance",
+            "source": "flavor",
+            "dest": "flavor08",
+            "conditions": "is_going_to_flavor08",
+        },
+        {
+            "trigger": "advance",
+            "source": "flavor",
+            "dest": "flavor09",
+            "conditions": "is_going_to_flavor09",
+        },
+        {
+            "trigger": "advance",
+            "source": "flavor",
+            "dest": "flavor10",
+            "conditions": "is_going_to_flavor10",
+        },
+        {
+            "trigger": "advance",
+            "source": "flavor",
+            "dest": "flavor11",
+            "conditions": "is_going_to_flavor11",
+        },
+        {
+            "trigger": "advance",
+            "source": "flavor",
+            "dest": "flavor12",
+            "conditions": "is_going_to_flavor12",
+        },
+        {
+            "trigger": "go_back",
+            "source": [
+                "base0", "base1", "base2", "base3", "base4", "base5",
+                "flavor00", "flavor01", "flavor02", "flavor03", "flavor04",
+                "flavor05", "flavor06", "flavor07", "flavor08", "flavor09",
+                "flavor10", "flavor11", "flavor12", "random"
+            ],
+            "dest": "user"
+        },
     ],
     initial="user",
     auto_transitions=False,
