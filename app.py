@@ -14,7 +14,7 @@ load_dotenv()
 
 
 machine = TocMachine(
-    states=["user", "base", "flavor", "rondom", "base0", "base1", "base2", "base3", "base4", "base5", "flavor00", "flavor01", "flavor02",
+    states=["user", "base", "flavor", "random", "base0", "base1", "base2", "base3", "base4", "base5", "flavor00", "flavor01", "flavor02",
             "flavor03", "flavor04", "flavor05", "flavor06", "flavor07", "flavor08", "flavor09", "flavor10", "flavor11", "flavor12"],
     transitions=[
         {
