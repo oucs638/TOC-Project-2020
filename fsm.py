@@ -82,6 +82,7 @@ class TocMachine(GraphMachine):
         print("In random")
         reply_token = event.reply_token
         select = random.sample(range(len(db)), 3)
+        print(select)
         rstr = ""
         for i in range(len(select)):
             rstr = rstr + db[select[i]][0]
