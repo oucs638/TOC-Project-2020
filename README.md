@@ -14,3 +14,7 @@ A line chat bot based on a finite state machine, and can recommend cocktail.
 - If enter "random", will enter `random` state:
   - This state would recommend random three cocktails.
 ### Stage 2
+- In `base` state, you can choose one from six bases
+- In `flavor` state, you can choose one from thirteen flavor
+### Stage 3
+- According choice from above stages, line bot will recommend cocktails.
